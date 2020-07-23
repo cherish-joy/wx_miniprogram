@@ -1,3 +1,0 @@
-<!--pages/index.wxml-->
-<text class="title">这是首页</text>
-<button size="mini">按钮</button>
