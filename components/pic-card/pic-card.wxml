@@ -1,0 +1,11 @@
+<!--components/pic-card/pic-card.wxml-->
+<view class="goods-item">
+	<image src="{{goodsItem.show.img}}" mode="widthFix" class="img"></image>
+	<view class="goods-info">
+		<view class="title"> {{goodsItem.title}}</view>
+    <view >
+      <text class="price">¥{{goodsItem.price}}</text>
+      <text class="favorites">☆{{goodsItem.cfav}}</text>
+    </view>
+	</view>
+</view>

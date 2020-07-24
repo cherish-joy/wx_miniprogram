@@ -1,2 +1,11 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<joy-swiper banners="{{banners}}"></joy-swiper>
+<joy-recommend recommends="{{recommends}}"/>
+<joy-popular />
+<tab-control  title="{{titles}}" bind:tabClick="handleTabClick"/>
+<view class="goods-item">
+  <block wx:for="{{goods[currentType].lists}}" wx:key="index"> 
+    <pic-card goodsItem="{{item}}" class="pic-card"></pic-card>
+  </block>
+</view>
+<back-top wx:if="{{isShow}}"/>

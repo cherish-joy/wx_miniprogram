@@ -1,0 +1,7 @@
+<!--pages/home/components/joy-recommend.wxml-->
+<view class="recommends">
+  <view wx:for="{{recommends}}" wx:key="index">
+    <image src="{{item.image}}"></image>
+    <text>{{item.title}}</text>
+  </view>
+</view>

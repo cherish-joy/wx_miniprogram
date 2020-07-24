@@ -1,0 +1,7 @@
+/* components/joy-swiper/joy-swiper.wxss */
+.swiper {
+height: 400rpx;
+}
+.swiper image {
+  width: 100%;
+}

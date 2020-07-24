@@ -1,4 +1,11 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "joy-swiper":"/components/joy-swiper/joy-swiper",
+    "joy-recommend":"./components/joy-recommend/joy-recommend",
+    "joy-popular":"./components/joy-popular/joy-popular",
+    "tab-control":"/components/tab-control/tab-control",
+    "pic-card":"/components/pic-card/pic-card",
+    "back-top":"/components/back-top/back-top"
+  },
   "navigationBarTitleText": "购物街"
 }

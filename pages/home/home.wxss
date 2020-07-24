@@ -1,1 +1,11 @@
 /* pages/home/home.wxss */
+.goods-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+}
+.pic-card {
+  width: 48%;
+
+}

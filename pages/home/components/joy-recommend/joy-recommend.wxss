@@ -1,0 +1,14 @@
+.recommends {
+  display: flex;
+  text-align: center;
+  padding: 10rpx 0 20rpx 0;
+  border-bottom: 12rpx solid #eee;
+}
+.recommends image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.recommends text {
+  font-size: 30rpx;
+  color: #777;
+}

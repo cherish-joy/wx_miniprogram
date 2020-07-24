@@ -1,67 +1,90 @@
 // pages/home/home.js
-import {getMulitData} from '../../services/home'
+import {
+  getMulitData,
+  getHomeData
+} from '../../services/home'
+
+const goodsType = ['pop','new','sell']
+const DISTANCE = 1000
+
 Page({
   data: {
-    banners:[],
-    recommends:[]
+    banners: [],
+    recommends: [],
+    titles: ['流行', '新款', '精选'],
+    currentType:'pop',
+    isShow:false,
+    goods: {
+      pop: {
+        page: 0,
+        lists: []
+      },
+      new: {
+        page: 0,
+        lists: []
+      },
+      sell: {
+        page: 0,
+        lists: []
+      }
+    }
+  },
+
+  handleTabClick(e) {
+    this.setData({
+      currentType:goodsType[e.detail] 
+    })
   },
 
   onLoad: function (options) {
+    this._getMulitData(),
+    this._getHomeData('pop'),
+    this._getHomeData('new'),
+    this._getHomeData('sell')
+  },
+
+  _getMulitData() {
     getMulitData().then(res => {
-      const {banner,recommend} = res.data.data;
+      const {
+        banner,
+        recommend
+      } = res.data.data;
       this.setData({
-        banners:banner.list,
-        recommends:recommend.list
+        banners: banner.list,
+        recommends: recommend.list
       })
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  _getHomeData(type) {
+    const page = this.data.goods[type].page + 1
+    getHomeData(type, page).then(res => {
+      const {
+        list
+      } = res.data.data
+      
+      this.setData({
+        goods: {
+          ...this.data.goods,
+          [type]: {
+            page,
+            lists: [...this.data.goods[type].lists,...list]
+          }
+        }
+      })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  onReachBottom: function () {
+    this._getHomeData(this.data.currentType)
     
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onPageScroll(e){
+    const flag = e.scrollTop >=DISTANCE
+    if(flag!=this.data.isShow){
+      this.setData({
+        isShow:flag
+      })
+    }
   }
 })

@@ -1,0 +1,28 @@
+/* components/pic-card/pic-card.wxss */
+.goods-item {
+  margin-top: 20rpx;
+  text-align: center;
+}
+
+.goods-item .img {
+  width: 100%;
+  border-radius: 8rpx;
+  min-height: 540rpx;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+}
+
+.price {
+  font-size: 30rpx;
+  color: #ed6379;
+}
+
+.favorites {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
