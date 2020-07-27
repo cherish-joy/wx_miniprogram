@@ -4,11 +4,13 @@
   padding: 10rpx 0 20rpx 0;
   border-bottom: 12rpx solid #eee;
 }
-.recommends image{
+
+.recommend-img{
   width: 180rpx;
   height: 180rpx;
 }
-.recommends text {
+
+.recommends-text {
   font-size: 30rpx;
   color: #777;
 }

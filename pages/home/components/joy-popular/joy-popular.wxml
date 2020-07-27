@@ -1,4 +1,4 @@
 <!--pages/home/components/joy-popular/joy-popular.wxml-->
 <view class="popular">
-  <image src="/assets/recommend_bg.jpg" mode="widthFix"></image>
+  <image src="/assets/recommend_bg.jpg" mode="widthFix" class="popular-img"></image>
 </view>

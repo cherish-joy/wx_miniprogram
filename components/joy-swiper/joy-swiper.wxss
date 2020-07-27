@@ -2,6 +2,6 @@
 .swiper {
 height: 400rpx;
 }
-.swiper image {
+.swiper-img {
   width: 100%;
 }

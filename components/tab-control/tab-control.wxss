@@ -1,6 +1,8 @@
 /* components/tab-control/tab-control.wxss */
 .tab-control {
   display: flex;
+  background-color: #fff;
+  padding: 20rpx 0;
 }
 .tab-control .tab-control-item{
   flex:1;
@@ -11,6 +13,6 @@
   color: #ed6379;
   border-bottom: 2px solid #ed6379;
 }
-.curText {
+.title {
   padding:0 10rpx 8rpx
 }

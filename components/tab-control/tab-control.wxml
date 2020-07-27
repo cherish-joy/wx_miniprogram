@@ -1,6 +1,6 @@
 <!--components/tab-control/tab-control.wxml-->
 <view class="tab-control">
 	<view wx:for="{{title}}" class="tab-control-item" wx:key="index">
-		<text class="{{index===currentIndex?'active':''}} 'curText' " bindtap="handleClick" data-index="{{index}}">{{item}}</text>
+		<text class="{{index===currentIndex?'active':''}} 'title'" bindtap="handleClick" data-index="{{index}}">{{item}}</text>
 	</view>
 </view>

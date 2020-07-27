@@ -1,4 +1,4 @@
 /* pages/home/components/joy-popular/joy-popular.wxss */
-.popular image{
+.popular-img{
   width: 100%;
 }

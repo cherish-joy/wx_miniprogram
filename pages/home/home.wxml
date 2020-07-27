@@ -1,11 +1,19 @@
-<!--pages/home/home.wxml-->
+<!--首页-->
+<!-- 轮播图 -->
 <joy-swiper banners="{{banners}}"></joy-swiper>
-<joy-recommend recommends="{{recommends}}"/>
+<!-- 推荐图 -->
+<joy-recommend recommends="{{recommends}}" bind:imgLoad="handleImgLoad"/>
+<!-- 本周流行 -->
 <joy-popular />
-<tab-control  title="{{titles}}" bind:tabClick="handleTabClick"/>
+<!-- tab栏 -->
+<tab-control  title="{{titles}}" id="tab-control" bind:tabClick="handleTabClick" class="{{isFixed?'fix':''}}"/>
+<!-- 用来占位的tab栏 -->
+<tab-control  title="{{titles}}" bind:tabClick="handleTabClick" wx:if="{{isFixed}}"/>
+<!-- 商品栏 -->
 <view class="goods-item">
   <block wx:for="{{goods[currentType].lists}}" wx:key="index"> 
     <pic-card goodsItem="{{item}}" class="pic-card"></pic-card>
   </block>
 </view>
+<!-- 返回顶部icon -->
 <back-top wx:if="{{isShow}}"/>

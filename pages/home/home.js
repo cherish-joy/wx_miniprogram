@@ -4,7 +4,7 @@ import {
   getHomeData
 } from '../../services/home'
 
-const goodsType = ['pop','new','sell']
+const goodsType = ['pop', 'new', 'sell']
 const DISTANCE = 1000
 
 Page({
@@ -12,8 +12,10 @@ Page({
     banners: [],
     recommends: [],
     titles: ['流行', '新款', '精选'],
-    currentType:'pop',
-    isShow:false,
+    currentType: 'pop',
+    isFixed: false,
+    isShow: false,
+    topOffSet: 0,
     goods: {
       pop: {
         page: 0,
@@ -32,12 +34,22 @@ Page({
 
   handleTabClick(e) {
     this.setData({
-      currentType:goodsType[e.detail] 
+      currentType: goodsType[e.detail]
     })
   },
 
-  onLoad: function (options) {
+  handleImgLoad() {
+    wx.createSelectorQuery().select('#tab-control').boundingClientRect(rect => {
+      this.setData({
+        topOffSet: rect.top
+      })
+    }).exec()
+  },
+  //页面加载完成时
+  onLoad: function () {
+    // 获取轮播图、推荐图数据
     this._getMulitData(),
+    //获取流行、新款、精选数据
     this._getHomeData('pop'),
     this._getHomeData('new'),
     this._getHomeData('sell')
@@ -62,28 +74,34 @@ Page({
       const {
         list
       } = res.data.data
-      
       this.setData({
         goods: {
           ...this.data.goods,
           [type]: {
             page,
-            lists: [...this.data.goods[type].lists,...list]
+            lists: [...this.data.goods[type].lists, ...list]
           }
         }
       })
     })
   },
-
+  //到达底部重新请求数据
   onReachBottom: function () {
     this._getHomeData(this.data.currentType)
-    
+
   },
-  onPageScroll(e){
-    const flag = e.scrollTop >=DISTANCE
-    if(flag!=this.data.isShow){
+
+  onPageScroll(e) {
+    const flag = e.scrollTop >= DISTANCE
+    const isTabControl = e.scrollTop >= this.data.topOffSet
+    if (flag != this.data.isShow) {
       this.setData({
-        isShow:flag
+        isShow: flag
+      })
+    }
+    if (isTabControl != this.data.isFixed) {
+      this.setData({
+        isFixed: isTabControl
       })
     }
   }
