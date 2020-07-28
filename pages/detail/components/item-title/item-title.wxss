@@ -1,0 +1,60 @@
+.goods-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  display: flex;
+  padding: 12rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  color: #666;
+}
+
+.low-price {
+  color: red;
+}
+
+.old-price {
+  font-size: 30rpx;
+  color: #666;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+  margin-top: 8rpx;
+  padding: 0 12rpx;
+}
+
+.discount {
+  background-color: red;
+  color: #fff;
+  border-radius: 12rpx;
+  height: 32rpx;
+  padding: 4rpx;
+  font-size: 22rpx;
+  margin-top: -2rpx;
+}
+
+.goods-info {
+  padding: 8rpx;
+  font-size: 26rpx;
+  color: #666;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.bottom-info {
+  display: flex;
+  font-size: 22rpx;
+  justify-content: space-between;
+  padding: 24rpx 0;
+  border-bottom: 12rpx solid #eee;
+  color: #666;
+}
+
+.bottom-info .icon {
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: bottom;
+  margin-right: 4rpx;
+}

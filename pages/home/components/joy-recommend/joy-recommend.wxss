@@ -10,7 +10,7 @@
   height: 180rpx;
 }
 
-.recommends-text {
+.recommend-text {
   font-size: 30rpx;
   color: #777;
 }

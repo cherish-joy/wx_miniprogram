@@ -1,0 +1,22 @@
+<!--pages/detail/components/item-title/item-title.wxml-->
+<view>
+	<text class="title">{{itemInfo.title}}</text>
+	<view class="price">
+		<view class="low-price">{{itemInfo.price}}</view>
+		<view class="old-price">{{itemInfo.oldPrice}}</view>
+		<view class="discount">{{itemInfo.descountDesc}}</view>
+	</view>
+	<view class="goods-info">
+		<view wx:for="{{itemInfo.columns}}" wx:key="index">
+			{{item}}
+		</view>
+	</view>
+	<view class="bottom-info">
+		<view wx:for="{{itemInfo.services}}" wx:key="index">
+			<block wx:if="{{item.icon}}">
+				<image src="{{item.icon}}" class="icon"></image>
+				<text>{{item.name}}</text>
+			</block>
+		</view>
+	</view>
+</view>

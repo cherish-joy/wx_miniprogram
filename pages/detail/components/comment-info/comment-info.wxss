@@ -1,0 +1,38 @@
+.wrapper {
+  padding: 40rpx 32rpx;
+  border-bottom: 12rpx solid #eee ;
+}
+
+.comment-title {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #eee;
+  padding-bottom: 32rpx;
+}
+.user-info {
+  display: flex;
+  padding: 28rpx 0;
+}
+.user-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.user-name {
+  font-size: 32rpx;
+  color: #666;
+  line-height: 80rpx;
+  margin-left: 12rpx;
+}
+.comment-content{
+  font-size: 28rpx;
+  color: #666;
+}
+.goods-info{
+  font-size: 24rpx;
+  color: #666;
+  display: flex;
+  margin-top: 32rpx;
+}

@@ -1,0 +1,17 @@
+<!--pages/detail/components/params-info/params-info.wxml-->
+<view class="wrapper">
+	<block wx:for="{{paramsInfo.sizes[0]}}" wx:key="index">
+		<view class="params-item">
+			<block wx:for="{{item}}" wx:for-item="params" wx:key="index">
+				<view class="item-list">{{params}}</view>
+			</block>
+		</view>
+	</block>
+  <block wx:for="{{paramsInfo.infos}}" wx:key="index">
+  <view class="params-info">
+   <view class="params-key">{{item.key}}</view>
+    <view class="params-value">{{item.value}}</view>
+  </view>
+   
+  </block>
+</view>

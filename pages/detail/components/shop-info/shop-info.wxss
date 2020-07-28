@@ -1,0 +1,70 @@
+.shop-base-info {
+  padding: 32rpx 8rpx;
+}
+.shop-logo {
+  width: 90rpx;
+  height: 90rpx;
+  border:2rpx solid #eee;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.shop-name{
+  color: #666;
+}
+
+.shop-title-info {
+  display: flex;
+  align-items: center;
+}
+
+.shop-title-info-left {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #666;
+  flex:1;
+  border-right: 2rpx solid #eee;
+}
+
+.shop-title-info-right {
+  flex:1;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 0 36rpx;
+}
+
+.total-sales {
+  font-size: 28rpx;
+}
+
+.score-item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 42rpx;
+}
+.low-color {
+  color: #70a445;
+}
+.high-color {
+  color: red;
+}
+
+.desc {
+  color: #666;
+}
+.shop-button-info{
+  text-align: center;
+  margin: 48rpx 0;
+  padding-bottom: 48rpx;
+  border-bottom: 12rpx solid #eee;
+}
+
+.shop-button-info .shop-button::after {
+  border: none;
+}
+
+.shop-button-info .shop-button {
+  padding: 8rpx 100rpx;
+}

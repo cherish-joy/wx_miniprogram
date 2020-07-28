@@ -1,6 +1,6 @@
 <!--首页-->
 <!-- 轮播图 -->
-<joy-swiper banners="{{banners}}"></joy-swiper>
+<joy-swiper banners="{{banners}}" swiper-class="home-swiper"></joy-swiper>
 <!-- 推荐图 -->
 <joy-recommend recommends="{{recommends}}" bind:imgLoad="handleImgLoad"/>
 <!-- 本周流行 -->
@@ -12,7 +12,7 @@
 <!-- 商品栏 -->
 <view class="goods-item">
   <block wx:for="{{goods[currentType].lists}}" wx:key="index"> 
-    <pic-card goodsItem="{{item}}" class="pic-card"></pic-card>
+    <pic-card goodsItem="{{item}}" class="pic-card" ></pic-card>
   </block>
 </view>
 <!-- 返回顶部icon -->

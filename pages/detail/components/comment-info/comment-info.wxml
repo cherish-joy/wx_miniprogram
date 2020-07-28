@@ -1,0 +1,20 @@
+<!--pages/detail/components/comment-info/comment-info.wxml-->
+<view class="wrapper">
+  <view class="comment-title">
+    <view>用户评价</view>
+    <view>更多>></view>
+  </view>
+  <view class="comment-info">
+    <view class="user-info">
+      <view><image class="user-avatar" src="{{commentInfo.user.avatar}}"></image></view>
+      <text class="user-name">{{commentInfo.user.uname}}</text>
+    </view>
+    <view>
+      <view class="comment-content">{{commentInfo.content}}</view>
+      <view class="goods-info">
+        <view style="margin-right:10rpx">{{commentInfo.created}}</view>
+        <view>{{commentInfo.style}}</view>
+      </view>
+    </view>
+  </view>
+</view>

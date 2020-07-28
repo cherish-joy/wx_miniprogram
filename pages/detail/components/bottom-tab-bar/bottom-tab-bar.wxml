@@ -1,0 +1,21 @@
+<!--pages/detail/components/bottom-tab-bar/bottom-tab-bar.wxml-->
+<view class="wrapper">
+  <view class="tab-bar-left">
+    <view>
+      <image src="/assets/detail/service.png" class="icon"></image>
+      <view class="text">客服</view>
+    </view>
+    <view>
+     <image src="/assets/detail/shop.png" class="icon"></image>
+     <view class="text">店铺</view>
+    </view>
+    <view>
+     <image src="/assets/detail/collect.png" class="icon"></image>
+     <view class="text">收藏</view>
+    </view>
+  </view>
+  <view class="tab-bar-right">
+    <text class="shop-cart" bindtap="handleBuyClick" data-info="{{itemInfo}}">加入购物车</text>
+    <text class="buy-goods">购买</text>
+  </view>
+</view>

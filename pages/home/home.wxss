@@ -14,3 +14,6 @@
   left: 0;
   right: 0;
 }
+.home-swiper {
+  height: 400rpx;
+}

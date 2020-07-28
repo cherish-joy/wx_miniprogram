@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "joy-swiper":"/components/joy-swiper/joy-swiper",
+    "item-title":"./components/item-title/item-title",
+    "shop-info":"./components/shop-info/shop-info",
+    "detail-info":"./components/detail-info/detail-info",
+    "params-info":"./components/params-info/params-info",
+    "comment-info":"./components/comment-info/comment-info",
+    "pic-card":"/components/pic-card/pic-card",
+    "bottom-tab-bar":"./components/bottom-tab-bar/bottom-tab-bar"
+  }
+}

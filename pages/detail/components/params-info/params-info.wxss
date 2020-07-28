@@ -1,0 +1,33 @@
+.wrapper {
+  padding: 32rpx;
+  border-bottom: 12rpx solid #eee;
+}
+.params-item {
+  display: flex;
+  font-size: 28rpx;
+  padding: 20rpx 0;
+  color: #666;
+  border-bottom: 2rpx solid #eee;
+}
+.item-list {
+  flex: 1;
+}
+.params-info {
+  display: flex;
+  padding: 20rpx 0;
+  justify-content: flex-start;
+  border-bottom: 2rpx solid #eee;
+}
+.params-key {
+  font-size: 28rpx;
+  color: #666;
+  flex:1
+}
+.params-value {
+  font-size: 28rpx;
+  color: #e36279;
+  flex:3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
