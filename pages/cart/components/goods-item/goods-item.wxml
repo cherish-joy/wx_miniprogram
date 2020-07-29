@@ -1,0 +1,22 @@
+<!--pages/cart/components/goods-item/goods-item.wxml-->
+<view>
+	<block wx:for="{{goodsItems}}" wx:key="index">
+		<view class="goods-item-wrapper">
+			<view class="check-icon">
+				<check-icon isChecked="{{item.checked}}" bindtap="handleCheckClick" data-goodsItem="{{item}}"/>
+			</view>
+			<view class="goods-image">
+				<image class="goods-img" src="{{item.topImages[0]}}" mode="widthFix"></image>
+			</view>
+			<view class="goods-info">
+				<view class="goods-title">{{item.title}}</view>
+				<view class="goods-desc">{{item.desc}}</view>
+				<view class="goods-price">
+					<view class="price">¥{{item.realPrice}}</view>
+					<view class="count">×{{item.count}}</view>
+				</view>
+			</view>
+		</view>
+	</block>
+
+</view>

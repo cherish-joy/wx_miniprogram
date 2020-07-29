@@ -1,0 +1,10 @@
+/* components/check-icon/check-icon.wxss */
+
+.check-icon {
+  border: 4rpx solid #ccc;
+  border-radius: 50%;
+}
+.uncheck-icon {
+  border: 4rpx solid #ed6379;
+  border-radius: 50%;
+}

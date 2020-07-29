@@ -1,0 +1,9 @@
+<!--pages/category/components/sub-category/sub-category.wxml-->
+<view class="wrapper">
+  <block wx:for="{{subCategory}}">
+    <view class="sub-item">
+      <view><image src="{{item.image}}" mode="widthFix" class="img"></image></view>
+      <view class="title">{{item.title}}</view>
+    </view>
+  </block>
+</view>

@@ -1,66 +1,56 @@
 // pages/category/category.js
+import {getCategory,getSubcategory,getCategoryDetail} from '../../services/category'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    categoryList:[],
+    currentIndex:0
   },
-
+  handleItemClick(e){
+    this.setData({
+      currentIndex:e.detail.currentIndex
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     this._getCategory()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  _getCategory(){
+    getCategory().then(res => {
+      const {list} = res.data.data.category
+      const categoryList = []
+      list.map((item,index) => {
+      return categoryList[index] = {
+          category:item,
+          subCategory:[],
+          categoryDetail:[]
+        }
+      })
+      this.setData({
+        categoryList
+      })
+    
+      this._getSubcategory(0);
+      this._getCategoryDetail(0)
+      console.log(this.data.categoryList)
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  _getSubcategory(index){
+    const maitKey = this.data.categoryList[index].category.maitKey
+    getSubcategory(maitKey).then(res => {
+      const {list} = res.data.data
+      const newCategoryList = this.data.categoryList 
+      newCategoryList[index].subCategory = list
+      this.setData({
+        categoryList:newCategoryList
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  _getCategoryDetail(index){
+    const miniWallkey = this.data.categoryList[index].category.miniWallkey
+    getCategoryDetail(miniWallkey,'pop').then(res => {
+      console.log(res);
+    })
   }
 })

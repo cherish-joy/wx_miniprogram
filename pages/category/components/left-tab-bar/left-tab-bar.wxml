@@ -1,0 +1,7 @@
+<!--pages/category/components/left-tab-bar/left-tab-bar.wxml-->
+
+<scroll-view scroll-y class="wrapper">
+	<block wx:for="{{categoryList}}" wx:key="index">
+		<view class="{{currentIndex===index?'active':''}} tab-bar-item" bindtap="handleItemClick" data-index="{{index}}">{{item.category.title}}</view>
+	</block>
+</scroll-view>

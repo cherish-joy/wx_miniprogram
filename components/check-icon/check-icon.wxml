@@ -1,0 +1,4 @@
+<!--components/check-icon/check-icon.wxml-->
+	<view class="checked-icon">
+		<icon type="success" class="{{isChecked?'uncheck-icon':'check-icon'}}" color="{{isChecked?'#ed6379':'white'}}" size="18"></icon>
+	</view>

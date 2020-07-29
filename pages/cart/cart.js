@@ -1,37 +1,55 @@
 // pages/cart/cart.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
-  },
-  addCart(e){
-    console.log(e);
-    
+    cartItems:[],
+    totalPrice:0,
+    totalCount:0,
+    selectAll:true
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-
+    this.setData({
+      cartItems:app.cartItems
+    })
+    wx.setNavigationBarTitle({
+      title: `购物车(${this.data.cartItems.length})`,
+    })
+    this._getPriceCount()
   },
 
+  _getPriceCount(){
+    const checkedItem = this.data.cartItems.filter(item => item.checked)
+    const totalPrice = checkedItem.reduce((pre,cur) => {
+      return pre + cur.count*cur.realPrice
+    },0)
+    const selectAll = !this.data.cartItems.some(item => item.checked!==true)
+    this.setData({
+      totalPrice:totalPrice.toFixed(2),
+      totalCount:checkedItem.length,
+      selectAll
+    })
+  },
+  handleSelectAll(){
+    app.changeAllStatus()
+    this.refreshData()
+  },
+  refreshData(){
+    this.setData({
+      cartItems:app.cartItems
+    })
+    this._getPriceCount()
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

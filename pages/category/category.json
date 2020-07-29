@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "left-tab-bar": "./components/left-tab-bar/left-tab-bar",
+    "sub-category": "./components/sub-category/sub-category"
+  }
 }

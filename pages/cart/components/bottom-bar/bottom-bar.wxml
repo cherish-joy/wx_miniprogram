@@ -1,0 +1,16 @@
+<!--pages/cart/components/bottom-bar/bottom-bar.wxml-->
+<view class="bottom-bar-wrapper">
+	<!-- <view class="checked-icon">
+		<icon type="success" class="{{isChecked?'uncheck-icon':'check-icon'}}" color="{{isChecked?'#ed6379':'white'}}" size="20" bindtap="handleCheck"></icon>
+   
+	</view> -->
+  <view class="checked-icon" bindtap="handleSelectAll">
+    <check-icon isChecked="{{selectAll}}"/>
+   <view class="check-text">全选</view>
+  </view>
+
+	<view class="total-price">总计: ¥ {{totalPrice}}</view>
+	<view class="buy-item">
+    去计算({{totalCount}})
+  </view>
+</view>

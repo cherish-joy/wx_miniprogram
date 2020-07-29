@@ -1,4 +1,5 @@
 <!--pages/cart/cart.wxml-->
-<view bind:addCart="addCart">
-
+<view >
+<bottom-bar totalCount="{{totalCount}}" totalPrice="{{totalPrice}}" selectAll="{{selectAll}}" bind:handleSelectAll="handleSelectAll"/>
+<goods-item goodsItems="{{cartItems}}" bind:refreshData="refreshData"/>
 </view>

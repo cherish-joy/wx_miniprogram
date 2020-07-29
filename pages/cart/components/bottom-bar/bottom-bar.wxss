@@ -1,0 +1,36 @@
+.bottom-bar-wrapper{
+  height: 84rpx;
+  position: fixed;
+  align-content: center;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+}
+
+.checked-icon{
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  padding-left: 24rpx;
+  height: 100%;
+  flex: 1;
+}
+.buy-item{
+  flex: 1;
+  font-size: 28rpx;
+  background-color: #e95327;
+  color: #fff;
+  text-align: center;
+  line-height: 84rpx;
+}
+.total-price{
+  flex: auto;
+  font-size: 28rpx;
+  background-color: #eee;
+  line-height: 84rpx;
+}
+.check-text{
+  font-size: 26rpx;
+  color: #666;
+  margin-left: 16rpx;
+}

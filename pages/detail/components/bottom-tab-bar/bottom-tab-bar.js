@@ -23,6 +23,11 @@ Component({
   methods: {
     handleBuyClick(){
       this.triggerEvent('addCart')
+      wx.showToast({
+        title: '加入购物车成功!',
+        icon: 'success',
+        duration: 2000
+      })
     }
   }
 })
