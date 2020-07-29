@@ -1,8 +1,12 @@
 /* pages/category/components/sub-category/sub-category.wxss */
 .wrapper {
+  
+  height: 100%;
+
+}
+.subcategory-item {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
 }
 .sub-item {
   text-align: center;
@@ -15,4 +19,12 @@
 .title {
   font-size: 28rpx;
   color: #666;
+}
+.category-detail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.pic-card {
+  width: 240rpx
 }

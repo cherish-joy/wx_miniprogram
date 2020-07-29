@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "pic-card":"/components/pic-card/pic-card"
+  }
 }

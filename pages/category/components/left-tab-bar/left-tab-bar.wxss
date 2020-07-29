@@ -1,8 +1,5 @@
 /* pages/category/components/left-tab-bar/left-tab-bar.wxss */
 .wrapper{
-  display: flex;
-  flex-direction: column;
-  width: 200rpx;
   height: 100%;
 }
 .tab-bar-item {
@@ -10,7 +7,6 @@
   line-height: 100rpx;
   color: #666;
   font-size: 28rpx;
-  width: 200rpx;
   text-align: center;
   background-color: #f6f6f6;
 }

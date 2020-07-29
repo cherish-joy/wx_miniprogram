@@ -1,6 +1,6 @@
 <!--components/pic-card/pic-card.wxml-->
 <view class="goods-item" bindtap="itemClick">
-	<image src="{{goodsItem.show.img||goodsItem.image}}" mode="widthFix" class="img"></image>
+	<image src="{{goodsItem.show.img||goodsItem.image||goodsItem.img}}" mode="widthFix" class="img"></image>
 	<view class="goods-info">
 		<view class="title"> {{goodsItem.title}}</view>
     <view >

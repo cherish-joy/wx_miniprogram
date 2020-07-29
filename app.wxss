@@ -8,3 +8,7 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+/* 在这设置page的高度为显示屏高度 不然会由内容撑开！ */
+page {
+  height: 100%;
+}

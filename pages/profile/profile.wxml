@@ -1,2 +1,64 @@
 <!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view>
+	<view>
+		<view class="header">
+			<view class="header-left">
+				<image src="/assets/profile/avatar.png" class="avatar"></image>
+			</view>
+			<view class="header-center">
+				<view class="enter">登录/注册</view>
+				<view class="phone-info">
+					<image src="/assets/profile/phone.png" class="phone-icon"></image>
+					<text>暂无绑定手机号</text>
+				</view>
+			</view>
+			<view class="header-right">
+				<image src="/assets/profile/arrow-right.png" class="arrow-icon"></image>
+			</view>
+		</view>
+		<view class="info">
+			<view class="info-item">
+				<view class="info-text">
+					<view><text class="info-number">0.00</text><text class="info-desc">元</text></view>
+					<view class="info-desc">我的余额</view>
+				</view>
+			</view>
+			<view class="info-item">
+				<view class="info-text">
+					<view><text class="info-number">0</text><text class="info-desc">个</text></view>
+					<view class="info-desc">我的优惠</view>
+				</view>
+			</view>
+			<view class="info-item">
+				<view class="info-text">
+					<view><text class="info-number">0</text><text class="info-desc">分</text></view>
+					<view class="info-desc">我的积分</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="center">
+		<view class="item">
+			<image src="/assets/profile/message.png" class="icon"></image>
+			<view class="item-text">我的消息</view>
+		</view>
+		<view class="item">
+			<image src="/assets/profile/pointer.png" class="icon"></image>
+			<view class="item-text">积分商城</view>
+		</view>
+		<view class="item">
+			<image src="/assets/profile/vip.png" class="icon"></image>
+			<view class="item-text">会员卡</view>
+		</view>
+	</view>
+	<view class="bottom">
+		<view class="item">
+			<image src="/assets/profile/cart.png" class="icon"></image>
+			<view class="item-text">我的购物车</view>
+		</view>
+		<view class="item">
+			<image src="/assets/profile/app.png" class="icon"></image>
+			<view class="item-text">下载购物App</view>
+		</view>
+	</view>
+</view>

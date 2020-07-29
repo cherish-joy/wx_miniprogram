@@ -1,5 +1,5 @@
 <!--pages/category/category.wxml-->
 <view class="category">
   <left-tab-bar categoryList="{{categoryList}}" bind:itemClick="handleItemClick" currentIndex="{{currentIndex}}"/>
-  <sub-category subCategory="{{categoryList[currentIndex].subCategory}}"/>
+  <sub-category subCategory="{{categoryList[currentIndex].subCategory}}" categoryDetail="{{categoryList[currentIndex].categoryDetail}}"/>
 </view>

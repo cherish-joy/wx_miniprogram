@@ -8,6 +8,10 @@ Component({
       type: Array,
       value: []
     },
+    categoryDetail:{
+      type:Array,
+      value:[]
+    },
     currentIndex:{
       type:Number,
       value:0

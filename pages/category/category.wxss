@@ -4,3 +4,9 @@
   /* 将页面高度定位窗口高度 否则高度由内容撑开 */
   height: 100%;
 }
+.category left-tab-bar{
+  width: 30%;
+}
+.category sub-category{
+  width: 70%;
+}

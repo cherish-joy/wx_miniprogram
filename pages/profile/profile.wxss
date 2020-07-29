@@ -1,1 +1,87 @@
 /* pages/profile/profile.wxss */
+.header {
+  height: 200rpx;
+   background-color: #ed6379;
+   display: flex;
+   align-items: center;
+}
+.header-left{
+  flex: 1;
+  padding-left: 42rpx;
+}
+.header-center{
+  flex: auto;
+  color: #fff;
+}
+.header-right{
+  flex:1;
+  text-align: center;
+}
+.avatar{
+  width: 128rpx;
+  height: 128rpx;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.phone-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+.arrow-icon {
+  height: 64rpx;
+  width: 64rpx;
+}
+.enter{
+  font-size: 32rpx;
+}
+.phone-info{
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+}
+.info{
+  display: flex;
+  height: 160rpx;
+  border-bottom: 30rpx solid #f8f8f8;
+}
+.info-item {
+  flex:1;
+  height: 100%;
+  border-right: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.info-text {
+  text-align: center;
+}
+.info-number{
+  color: #ed6379;
+  font-weight: 900;
+}
+.info-desc{
+  font-size: 28rpx;
+  color: #666;
+
+}
+.item {
+  height: 96rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+.item:last-child{
+  border:none
+}
+.icon{
+  width: 42rpx;
+  height: 42rpx;
+  margin: 0 24rpx;
+}
+.item-text{
+  font-size: 30rpx;
+  color: #666;
+}
+.center{
+  border-bottom: 30rpx solid #f8f8f8;
+}

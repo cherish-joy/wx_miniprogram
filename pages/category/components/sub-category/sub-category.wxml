@@ -1,9 +1,21 @@
 <!--pages/category/components/sub-category/sub-category.wxml-->
-<view class="wrapper">
-  <block wx:for="{{subCategory}}">
-    <view class="sub-item">
-      <view><image src="{{item.image}}" mode="widthFix" class="img"></image></view>
-      <view class="title">{{item.title}}</view>
+<scroll-view scroll-y class="wrapper">
+	<!-- 使用flex布局的时候 不能在scroll-view上定义 要重新写一个view 去定义flex样式 不然没有效果 -->
+	<view class="subcategory-item">
+		<block wx:for="{{subCategory}}">
+			<view class="sub-item">
+				<view>
+					<image src="{{item.image}}" mode="widthFix" class="img"></image>
+				</view>
+				<view class="title">{{item.title}}</view>
+			</view>
+		</block>
+    <view class="category-detail">
+     <block wx:for="{{categoryDetail}}">
+        <pic-card goodsItem="{{item}}" class="pic-card"/>
+    </block>
     </view>
-  </block>
-</view>
+   
+	</view>
+
+</scroll-view>

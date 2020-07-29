@@ -9,12 +9,17 @@ Page({
     this.setData({
       currentIndex:e.detail.currentIndex
     })
+    this.getData()
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     this._getCategory()
+     this.getData(this.data.currentIndex)
+  },
+  getData(){
+    this._getCategory()
+  
   },
   _getCategory(){
     getCategory().then(res => {
@@ -30,9 +35,8 @@ Page({
       this.setData({
         categoryList
       })
-    
-      this._getSubcategory(0);
-      this._getCategoryDetail(0)
+      this._getSubcategory(this.data.currentIndex);
+      this._getCategoryDetail(this.data.currentIndex)
       console.log(this.data.categoryList)
     })
   },
@@ -50,7 +54,11 @@ Page({
   _getCategoryDetail(index){
     const miniWallkey = this.data.categoryList[index].category.miniWallkey
     getCategoryDetail(miniWallkey,'pop').then(res => {
-      console.log(res);
+      const newCategoryList = this.data.categoryList 
+      newCategoryList[index].categoryDetail= res.data
+      this.setData({
+        categoryList:newCategoryList
+      })
     })
   }
 })
