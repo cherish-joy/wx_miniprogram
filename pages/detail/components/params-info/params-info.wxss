@@ -2,31 +2,36 @@
   padding: 32rpx;
   border-bottom: 12rpx solid #eee;
 }
-.params-item {
+
+.wrapper .params-item {
   display: flex;
   font-size: 28rpx;
   padding: 20rpx 0;
   color: #666;
   border-bottom: 2rpx solid #eee;
 }
-.item-list {
+
+.wrapper .item-list {
   flex: 1;
 }
-.params-info {
+
+.wrapper .params-info {
   display: flex;
   padding: 20rpx 0;
   justify-content: flex-start;
   border-bottom: 2rpx solid #eee;
 }
-.params-key {
+
+.params-info .params-key {
   font-size: 28rpx;
   color: #666;
-  flex:1
+  flex:1;
 }
-.params-value {
+
+.params-info .params-value {
+  flex:3;
   font-size: 28rpx;
   color: #e36279;
-  flex:3;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

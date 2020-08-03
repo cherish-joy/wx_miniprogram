@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "pic-card":"/components/pic-card/pic-card"
+    "pic-card":"/components/pic-card/pic-card",
+    "tab-control":"/components/tab-control/tab-control"
   }
 }

@@ -7,11 +7,10 @@
 			</block>
 		</view>
 	</block>
-  <block wx:for="{{paramsInfo.infos}}" wx:key="index">
-  <view class="params-info">
-   <view class="params-key">{{item.key}}</view>
-    <view class="params-value">{{item.value}}</view>
-  </view>
-   
-  </block>
+	<block wx:for="{{paramsInfo.infos}}" wx:key="index">
+		<view class="params-info">
+			<view class="params-key">{{item.key}}</view>
+			<view class="params-value">{{item.value}}</view>
+		</view>
+	</block>
 </view>

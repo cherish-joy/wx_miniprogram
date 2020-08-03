@@ -1,3 +1,4 @@
+//创建一个商品类
 export class ItemInfo{
   constructor(result){
     const {columns,itemInfo,shopInfo} = result
@@ -13,6 +14,7 @@ export class ItemInfo{
   }
 }
 
+//创建一个店铺信息类
 export class ShopInfo{
   constructor(result){
     const {shopInfo} = result
@@ -26,6 +28,7 @@ export class ShopInfo{
   }
 }
 
+//创建一个参数类
 export class ParamInfo {
   constructor(itemParams) {
     // 注: images可能没有值(某些商品有值, 某些没有值)

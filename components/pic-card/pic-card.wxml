@@ -1,11 +1,15 @@
 <!--components/pic-card/pic-card.wxml-->
-<view class="goods-item" bindtap="itemClick">
-	<image src="{{goodsItem.show.img||goodsItem.image||goodsItem.img}}" mode="widthFix" class="img"></image>
-	<view class="goods-info">
-		<view class="title"> {{goodsItem.title}}</view>
-    <view >
-      <text class="price">¥{{goodsItem.price}}</text>
-      <text class="favorites">☆{{goodsItem.cfav}}</text>
-    </view>
-	</view>
+<view class="pic-card">
+	<block wx:for="{{goodsItems}}" wx:key="index">
+		<view class="goods-item" bindtap="itemClick" data-item="{{item}}">
+			<image src="{{item.show.img||item.image||item.img}}" mode="widthFix" class="img" />
+			<view class="goods-info">
+				<view class="title"> {{item.title}}</view>
+				<view>
+					<text class="price">¥{{item.price}}</text>
+					<text class="favorites">☆{{item.cfav}}</text>
+				</view>
+			</view>
+		</view>
+	</block>
 </view>

@@ -8,32 +8,40 @@ import {
   ParamInfo
 } from '../../utils/itemInfo'
 
+//获取app是来
 const app = getApp()
-Page({
 
-  /**
-   * 页面的初始数据
-   */
+Page({
   data: {
     itemInfo: {},
     shopInfo: {},
     paramsInfo: {},
     detailInfo: {},
     commentInfo: {},
-    recommends:[]
+    recommends: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-    getDetailById(options.iid).then(res => {
+
+    //获取options里传过来的iid
+    this._getDetailById(options.iid)
+
+    //获取推荐商品信息
+    this._getRecommends()
+  },
+
+  _getDetailById(iid) {
+    getDetailById(iid).then(res => {
       const {
         result
       } = res.data
+      //创建一个商品详情类
       const itemInfo = new ItemInfo(result)
+      //创建一个店铺详情类
       const shopInfo = new ShopInfo(result)
+      //创建一个商品参数类
       const paramsInfo = new ParamInfo(result.itemParams)
+      //定义一个评论对象
       let commentInfo = {}
       if (result.rate && result.rate.cRate > 0) {
         commentInfo = result.rate.list[0]
@@ -47,62 +55,21 @@ Page({
         commentInfo
       })
     })
+  },
+
+  _getRecommends(){
     getRecommends().then(res => {
-      const {list} = res.data.data
+      const {
+        list
+      } = res.data.data
       this.setData({
-        recommends:list
+        recommends: list
       })
     })
   },
-  addCart(){
+
+  //添加到购物车
+  addCart() {
     app.addCart(this.data.itemInfo)
   },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

@@ -1,6 +1,6 @@
-.goods-info {
-  display: flex;
-  justify-content: space-between;
+.title {
+  font-size: 34rpx;
+  color: #666;
 }
 
 .price {
@@ -8,16 +8,11 @@
   padding: 12rpx;
 }
 
-.title {
-  font-size: 34rpx;
-  color: #666;
-}
-
-.low-price {
+.price .low-price {
   color: red;
 }
 
-.old-price {
+.price .old-price {
   font-size: 30rpx;
   color: #666;
   text-decoration: line-through;
@@ -26,7 +21,7 @@
   padding: 0 12rpx;
 }
 
-.discount {
+.price .discount {
   background-color: red;
   color: #fff;
   border-radius: 12rpx;
@@ -37,6 +32,8 @@
 }
 
 .goods-info {
+  display: flex;
+  justify-content: space-between;
   padding: 8rpx;
   font-size: 26rpx;
   color: #666;
@@ -52,9 +49,13 @@
   color: #666;
 }
 
+.icon-text{
+  display: flex;
+  align-items: center;
+}
+
 .bottom-info .icon {
   width: 26rpx;
   height: 26rpx;
-  vertical-align: bottom;
   margin-right: 4rpx;
 }

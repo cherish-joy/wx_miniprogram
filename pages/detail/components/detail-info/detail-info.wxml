@@ -1,14 +1,14 @@
 <!--pages/detail/components/detail-info/detail-info.wxml-->
 <view>
   <view class="goods-desc">
-    <view class="start"></view>
+    <view class="start" />
     <view class="desc">{{detailInfo.desc}}</view>
-    <view class="end"></view>
+    <view class="end" />
   </view>
   <view class="goods-images">
     <view class="images-desc">穿着效果</view>
     <block wx:for="{{detailInfo.detailImage[0].list}}" wx:key="index">
-    <image src="{{item}}" mode="widthFix" class="item-image"></image>
+    <image src="{{item}}" mode="widthFix" class="item-image" />
     </block>
   </view>
 </view>

@@ -1,19 +1,10 @@
-/* pages/home/home.wxss */
-.goods-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.pic-card {
-  width: 48%;
-}
-
 .fix {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
 }
+
 .home-swiper {
   height: 400rpx;
 }

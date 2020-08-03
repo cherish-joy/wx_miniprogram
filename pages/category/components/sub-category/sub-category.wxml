@@ -10,12 +10,8 @@
 				<view class="title">{{item.title}}</view>
 			</view>
 		</block>
-    <view class="category-detail">
-     <block wx:for="{{categoryDetail}}">
-        <pic-card goodsItem="{{item}}" class="pic-card"/>
-    </block>
-    </view>
-   
 	</view>
+	<tab-control title="{{titles}}"  bind:tabClick="handleTabClick" />
+	<pic-card goodsItems="{{categoryDetail}}" />
 
 </scroll-view>

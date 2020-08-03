@@ -3,21 +3,12 @@
   height: 800rpx;
 }
 
-.goods-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.pic-card {
-  width: 48%;
-}
-
 .recommend-title{
   color: #666;
   font-size: 36rpx;
   margin:24rpx 12rpx
 }
+
 .scroll-container{
   height: calc(100% - 120rpx);
 }

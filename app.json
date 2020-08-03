@@ -6,6 +6,7 @@
     "pages/profile/profile",
     "pages/detail/detail"
   ],
+  
   "tabBar": {
     "selectedColor": "#ed6379",
     "list": [{

@@ -3,7 +3,7 @@
   border-bottom: 12rpx solid #eee ;
 }
 
-.comment-title {
+.wrapper .comment-title {
   display: flex;
   justify-content: space-between;
   color: #666;
@@ -11,25 +11,30 @@
   border-bottom: 2rpx solid #eee;
   padding-bottom: 32rpx;
 }
-.user-info {
+
+.comment-info .user-info {
   display: flex;
   padding: 28rpx 0;
 }
-.user-avatar {
+
+.comment-info .user-avatar {
   width: 80rpx;
   height: 80rpx;
   border-radius: 50%;
 }
-.user-name {
+
+.user-info .user-name {
   font-size: 32rpx;
   color: #666;
   line-height: 80rpx;
   margin-left: 12rpx;
 }
+
 .comment-content{
   font-size: 28rpx;
   color: #666;
 }
+
 .goods-info{
   font-size: 24rpx;
   color: #666;

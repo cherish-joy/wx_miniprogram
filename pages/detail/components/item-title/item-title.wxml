@@ -1,4 +1,3 @@
-<!--pages/detail/components/item-title/item-title.wxml-->
 <view>
 	<text class="title">{{itemInfo.title}}</text>
 	<view class="price">
@@ -14,8 +13,10 @@
 	<view class="bottom-info">
 		<view wx:for="{{itemInfo.services}}" wx:key="index">
 			<block wx:if="{{item.icon}}">
-				<image src="{{item.icon}}" class="icon"></image>
-				<text>{{item.name}}</text>
+				<view class="icon-text">
+					<image src="{{item.icon}}" class="icon"></image>
+					<text>{{item.name}}</text>
+				</view>
 			</block>
 		</view>
 	</view>

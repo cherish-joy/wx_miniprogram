@@ -1,18 +1,12 @@
-<!--pages/detail/detail.wxml-->
 <scroll-view scroll-y class="scroll-container">
-	<joy-swiper banners="{{itemInfo.topImages}}" swiper-class="detail-swiper"></joy-swiper>
+	<joy-swiper banners="{{itemInfo.topImages}}" swiper-class="detail-swiper" />
 	<item-title itemInfo="{{itemInfo}}" />
-	<shop-info shopInfo="{{shopInfo}}"></shop-info>
+	<shop-info shopInfo="{{shopInfo}}" />
 	<detail-info detailInfo="{{detailInfo}}" />
 	<params-info paramsInfo="{{paramsInfo}}" />
 	<comment-info commentInfo="{{commentInfo}}" />
-	<view>
-		<view class="recommend-title">商品推荐</view>
-		<view class="goods-item">
-			<block wx:for="{{recommends}}" wx:key="index">
-				<pic-card goodsItem="{{item}}" class="pic-card" />
-			</block>
-		</view>
-	</view>
+	<view class="recommend-title">商品推荐</view>
+	<pic-card goodsItems="{{recommends}}" />
 </scroll-view>
-<bottom-tab-bar bind:addCart="addCart"/>
+<!-- 底部tab栏 -->
+<bottom-tab-bar bind:addCart="addCart" />

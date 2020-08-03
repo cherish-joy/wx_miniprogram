@@ -1,7 +1,7 @@
 .shop-base-info {
   padding: 32rpx 8rpx;
 }
-.shop-logo {
+.shop-base-info .shop-logo {
   width: 90rpx;
   height: 90rpx;
   border:2rpx solid #eee;
@@ -9,7 +9,8 @@
   vertical-align: middle;
   margin-right: 12rpx;
 }
-.shop-name{
+
+.shop-base-info .shop-name{
   color: #666;
 }
 
@@ -18,7 +19,7 @@
   align-items: center;
 }
 
-.shop-title-info-left {
+.shop-title-info .shop-title-info-left {
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -27,7 +28,7 @@
   border-right: 2rpx solid #eee;
 }
 
-.shop-title-info-right {
+.shop-title-info .shop-title-info-right {
   flex:1;
   font-size: 28rpx;
   display: flex;
@@ -35,25 +36,27 @@
   padding: 0 36rpx;
 }
 
-.total-sales {
+.shop-title-info-left .total-sales {
   font-size: 28rpx;
 }
 
-.score-item {
+.shop-title-info-right .score-item {
   display: flex;
   justify-content: space-between;
   line-height: 42rpx;
 }
-.low-color {
+
+.shop-title-info-right .low-color {
   color: #70a445;
 }
-.high-color {
+.shop-title-info-right .high-color {
   color: red;
 }
 
-.desc {
+.shop-title-info-right .desc {
   color: #666;
 }
+
 .shop-button-info{
   text-align: center;
   margin: 48rpx 0;
